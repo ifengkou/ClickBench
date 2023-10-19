@@ -9,7 +9,7 @@ ROOT=$(pwd)
 if [[ -n "$1" ]]; then
     url="$1"
 else
-    url='https://doris-release.s3.us-east-1.amazonaws.com/1.2/doris-1.2.0.alpha-x86_64.tar.gz'
+    url='https://apache-doris-releases.oss-accelerate.aliyuncs.com/apache-doris-2.0.2-bin-x64.tar.gz'
 fi
 # Download
 file_name="$(basename ${url})"
@@ -36,8 +36,8 @@ DORIS_HOME="$ROOT/$dir_name/"
 export DORIS_HOME
 
 # Install dependencies
-sudo yum install -y mysql java-11-amazon-corretto.x86_64
-export JAVA_HOME="/usr/lib/jvm/java-11-amazon-corretto.x86_64/"
+sudo yum install -y mysql-server openjdk-11-jdk
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
 export PATH=$JAVA_HOME/bin:$PATH
 
 IPADDR=$(hostname -i)
