@@ -36,7 +36,7 @@ DORIS_HOME="$ROOT/$dir_name/"
 export DORIS_HOME
 
 # Install dependencies
-sudo yum install -y mysql-server openjdk-11-jdk
+#sudo yum install -y mysql-server openjdk-11-jdk
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/"
 export PATH=$JAVA_HOME/bin:$PATH
 
