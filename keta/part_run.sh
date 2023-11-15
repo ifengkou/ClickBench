@@ -1,9 +1,9 @@
 #!/bin/bash
 
 TRIES=3
-QUERY_NUM=1
-touch result.csv
-truncate -s0 result.csv
+QUERY_NUM=37
+#touch result.csv
+#truncate -s0 result.csv
 TOKEN="eyJhbGciOiJIUzUxMiIsInppcCI6IkRFRiJ9.eJxNzEsKAyEQRdG91FjB6vZX7qZEBYNpQtQQaLL32KNkeA-Pd8JtVAiQKCsyFqVSmqT2zkvGqGXynnJRJkVkEFB7X2NO93qs6jP-Fc90HeXCs43V-f2AgE7hjm7bUcARywJLZNTmL6g8fmB3Aa_6HJMbhMKt588XI4wrSA.WyS--Al_WcSFJrtH56TBOLc5YkVQ8B_NONPcUDiXzLF27saON7aHtlh-pKr7VBw7VdUeakEQ7SklQbUWgs3EeQ"
 URL='http://localhost:9200/api/v1/jobs'
 while read -r query; do
@@ -19,4 +19,5 @@ while read -r query; do
     echo "" | tee -a result.csv
 
     QUERY_NUM=$((QUERY_NUM + 1))
-done <queries_debug.sql
+#done <queries_debug.sql
+done <3744.sql
